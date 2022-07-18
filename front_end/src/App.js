@@ -1,12 +1,14 @@
-import React, {useState} from 'react';
+import React from 'react';
 import Counter from "./components/Counter";
+import TextState from "./components/TextState";
+import Post from "./components/Post";
+import "./styles/App.css";
 
 function App() {
-    const [text, setText] = useState("Text")
   return (
     <div className="App">
-        <h1>{text}</h1>
-        <input onChange={event => setText(event.target.value)} value={text}></input>
+        <Post post={{id: 0, title: "Post title", pcontent: "some content"}}/>
+        <TextState/>
         <Counter/>
     </div>
   );
